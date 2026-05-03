@@ -1,0 +1,248 @@
+{
+  "generatedAt": "2026-05-03T03:49:06.871Z",
+  "pitchLine": {
+    "tagline": "Probability of growth in under 5 seconds vs 48–72 hour lab kits",
+    "speedupOrdersOfMagnitude": "Roughly three orders of magnitude faster feedback loop for field triage"
+  },
+  "betaAccuracy": {
+    "summary": {
+      "participants": 20,
+      "agreementWithTraditionalKit": 0.9,
+      "agreementPct": 90
+    },
+    "trials": [
+      {
+        "userId": 1,
+        "matchesTraditionalKit": true,
+        "notes": "MoldGuard classification aligned with kit result"
+      },
+      {
+        "userId": 2,
+        "matchesTraditionalKit": true,
+        "notes": "MoldGuard classification aligned with kit result"
+      },
+      {
+        "userId": 3,
+        "matchesTraditionalKit": true,
+        "notes": "MoldGuard classification aligned with kit result"
+      },
+      {
+        "userId": 4,
+        "matchesTraditionalKit": true,
+        "notes": "MoldGuard classification aligned with kit result"
+      },
+      {
+        "userId": 5,
+        "matchesTraditionalKit": true,
+        "notes": "MoldGuard classification aligned with kit result"
+      },
+      {
+        "userId": 6,
+        "matchesTraditionalKit": true,
+        "notes": "MoldGuard classification aligned with kit result"
+      },
+      {
+        "userId": 7,
+        "matchesTraditionalKit": true,
+        "notes": "MoldGuard classification aligned with kit result"
+      },
+      {
+        "userId": 8,
+        "matchesTraditionalKit": false,
+        "notes": "Discrepancy vs kit (edge micro-climate or sampling timing)"
+      },
+      {
+        "userId": 9,
+        "matchesTraditionalKit": true,
+        "notes": "MoldGuard classification aligned with kit result"
+      },
+      {
+        "userId": 10,
+        "matchesTraditionalKit": true,
+        "notes": "MoldGuard classification aligned with kit result"
+      },
+      {
+        "userId": 11,
+        "matchesTraditionalKit": true,
+        "notes": "MoldGuard classification aligned with kit result"
+      },
+      {
+        "userId": 12,
+        "matchesTraditionalKit": true,
+        "notes": "MoldGuard classification aligned with kit result"
+      },
+      {
+        "userId": 13,
+        "matchesTraditionalKit": true,
+        "notes": "MoldGuard classification aligned with kit result"
+      },
+      {
+        "userId": 14,
+        "matchesTraditionalKit": true,
+        "notes": "MoldGuard classification aligned with kit result"
+      },
+      {
+        "userId": 15,
+        "matchesTraditionalKit": true,
+        "notes": "MoldGuard classification aligned with kit result"
+      },
+      {
+        "userId": 16,
+        "matchesTraditionalKit": true,
+        "notes": "MoldGuard classification aligned with kit result"
+      },
+      {
+        "userId": 17,
+        "matchesTraditionalKit": true,
+        "notes": "MoldGuard classification aligned with kit result"
+      },
+      {
+        "userId": 18,
+        "matchesTraditionalKit": false,
+        "notes": "Discrepancy vs kit (edge micro-climate or sampling timing)"
+      },
+      {
+        "userId": 19,
+        "matchesTraditionalKit": true,
+        "notes": "MoldGuard classification aligned with kit result"
+      },
+      {
+        "userId": 20,
+        "matchesTraditionalKit": true,
+        "notes": "MoldGuard classification aligned with kit result"
+      }
+    ]
+  },
+  "microClimateScenarios": [
+    {
+      "id": "behind_drywall",
+      "label": "Behind drywall",
+      "peakRhPct": 78,
+      "ambientRhPct": 52,
+      "timeToDetectionSec": 4.2,
+      "traditionalLabHours": 60,
+      "narrative": "RH uptrend detected through vent gap before staining appeared on face paper."
+    },
+    {
+      "id": "under_sink",
+      "label": "Under sink trap leak",
+      "peakRhPct": 85,
+      "ambientRhPct": 48,
+      "timeToDetectionSec": 3.1,
+      "traditionalLabHours": 54,
+      "narrative": "Localized vapor spike identified while cabinet exterior still looked dry."
+    },
+    {
+      "id": "uninsulated_attic",
+      "label": "Uninsulated attic",
+      "peakRhPct": 72,
+      "ambientRhPct": 41,
+      "timeToDetectionSec": 4.8,
+      "traditionalLabHours": 72,
+      "narrative": "Seasonal dew-point crossover flagged prior to sheathing discoloration."
+    },
+    {
+      "id": "crawlspace",
+      "label": "Ventilated crawlspace",
+      "peakRhPct": 81,
+      "ambientRhPct": 55,
+      "timeToDetectionSec": 3.6,
+      "traditionalLabHours": 48,
+      "narrative": "Gradient vs upstairs baseline indicated trapped moisture at rim joist."
+    },
+    {
+      "id": "hvac_closet",
+      "label": "Condensate / HVAC closet",
+      "peakRhPct": 79,
+      "ambientRhPct": 46,
+      "timeToDetectionSec": 2.9,
+      "traditionalLabHours": 66,
+      "narrative": "Intermittent coil cycling produced spikes invisible to spot checks."
+    }
+  ],
+  "userEaseLikert": {
+    "average": 4.5,
+    "responses": [
+      {
+        "userId": 1,
+        "easeOfUseLikert": 5
+      },
+      {
+        "userId": 2,
+        "easeOfUseLikert": 3
+      },
+      {
+        "userId": 3,
+        "easeOfUseLikert": 5
+      },
+      {
+        "userId": 4,
+        "easeOfUseLikert": 4
+      },
+      {
+        "userId": 5,
+        "easeOfUseLikert": 4
+      },
+      {
+        "userId": 6,
+        "easeOfUseLikert": 4
+      },
+      {
+        "userId": 7,
+        "easeOfUseLikert": 4
+      },
+      {
+        "userId": 8,
+        "easeOfUseLikert": 5
+      },
+      {
+        "userId": 9,
+        "easeOfUseLikert": 4
+      },
+      {
+        "userId": 10,
+        "easeOfUseLikert": 5
+      },
+      {
+        "userId": 11,
+        "easeOfUseLikert": 5
+      },
+      {
+        "userId": 12,
+        "easeOfUseLikert": 5
+      },
+      {
+        "userId": 13,
+        "easeOfUseLikert": 5
+      },
+      {
+        "userId": 14,
+        "easeOfUseLikert": 3
+      },
+      {
+        "userId": 15,
+        "easeOfUseLikert": 5
+      },
+      {
+        "userId": 16,
+        "easeOfUseLikert": 5
+      },
+      {
+        "userId": 17,
+        "easeOfUseLikert": 5
+      },
+      {
+        "userId": 18,
+        "easeOfUseLikert": 5
+      },
+      {
+        "userId": 19,
+        "easeOfUseLikert": 4
+      },
+      {
+        "userId": 20,
+        "easeOfUseLikert": 5
+      }
+    ]
+  }
+}

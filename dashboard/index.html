@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>MoldGuard — Live Dashboard</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+  </head>
+  <body>
+    <header class="app-header">
+      <div>
+        <h1>MoldGuard Handheld</h1>
+        <p class="subtitle">Real-time temperature, humidity, and mold-risk index</p>
+      </div>
+      <div class="toolbar">
+        <span id="modePill" class="pill live" title="Live hardware vs simulated demo">Live</span>
+        <span class="label-inline">Device URL</span>
+        <input
+          type="text"
+          id="deviceBase"
+          value="http://192.168.4.1"
+          autocomplete="off"
+          spellcheck="false"
+          aria-label="Device base URL"
+        />
+        <button type="button" id="btnDemo" class="ghost">Force demo mode</button>
+        <button type="button" id="btnRetry" class="ghost">Retry connection</button>
+        <button type="button" id="btnCapture" class="primary">Capture session (5 min)</button>
+      </div>
+    </header>
+
+    <main>
+      <div class="toolbar" style="margin-bottom: 0.5rem" role="tablist" aria-label="Views">
+        <button type="button" class="tab" role="tab" id="tabLive" aria-selected="true">
+          Live sensors
+        </button>
+        <button type="button" class="tab" role="tab" id="tabAnalytics" aria-selected="false">
+          Analytics (beta)
+        </button>
+      </div>
+
+      <div class="tab-panels">
+        <section id="panelLive" class="panel" role="tabpanel" aria-labelledby="tabLive">
+          <div class="grid cols-2" style="margin-bottom: 1rem">
+            <div id="statusCard" class="status-card safe">
+              <h2>Condition</h2>
+              <p id="statusLabel" class="status-label">Safe</p>
+              <div class="metrics">
+                <div class="metric">
+                  <div class="k">Temperature</div>
+                  <div id="valTemp" class="v">— °C</div>
+                </div>
+                <div class="metric">
+                  <div class="k">Humidity</div>
+                  <div id="valRh" class="v">— %</div>
+                </div>
+                <div class="metric">
+                  <div class="k">Mold risk index</div>
+                  <div id="valRisk" class="v">—</div>
+                </div>
+              </div>
+            </div>
+            <div class="chart-wrap" style="min-height: auto">
+              <h3>Session</h3>
+              <p id="sessionNote" class="note" style="margin: 0">
+                Polling <code>/data</code> every 500 ms. Buffer holds up to 5 minutes for CSV
+                export.
+              </p>
+            </div>
+          </div>
+
+          <div class="grid cols-2">
+            <div class="chart-wrap">
+              <h3>Temperature (°C)</h3>
+              <canvas id="chartTemp" height="220"></canvas>
+            </div>
+            <div class="chart-wrap">
+              <h3>Relative humidity (%)</h3>
+              <canvas id="chartRh" height="220"></canvas>
+            </div>
+          </div>
+        </section>
+
+        <section id="panelAnalytics" class="panel" hidden role="tabpanel" aria-labelledby="tabAnalytics">
+          <p class="note" style="margin-top: 0">
+            Simulated results aligned to the 20-person beta for investor narrative
+            (Demo Mode uses the same generator for live charts).
+          </p>
+          <div id="analyticsMount"></div>
+        </section>
+      </div>
+    </main>
+
+    <footer>MoldGuard · Mold risk when humidity &gt; 60% and temperature &gt; 21 °C (intersection model)</footer>
+
+    <script src="pitch_data.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
