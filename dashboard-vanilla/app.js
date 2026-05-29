@@ -353,4 +353,40 @@
     setInterval(tick, POLL_MS);
     tick();
   });
+  // --- MOCK DATA PUMP FOR TESTING ---
+function startMockPump() {
+    console.log("Mock data pump started...");
+    
+    // Set an interval to run every 1000ms (1 second)
+    setInterval(() => {
+        // Generate realistic fluctuating temperature (20.0C to 25.0C)
+        const mockTemp = (Math.random() * (25.0 - 20.0) + 20.0).toFixed(1);
+        
+        // Generate shifting humidity (55% to 65%) to test status changes
+        const mockHum = (Math.random() * (65.0 - 55.0) + 55.0).toFixed(1);
+
+        // Package it exactly how your dashboard expects it
+        const mockSample = {
+            timestamp_ms: Date.now(),
+            temperature: parseFloat(mockTemp),
+            humidity: parseFloat(mockHum)
+        };
+
+        console.log(`Pumping -> Temp: ${mockTemp}°C, Hum: ${mockHum}%`);
+
+        // Push the fake data directly into your app's existing pipeline
+        pushSample(mockSample);
+
+        // Dynamically test your status card logic based on humidity levels
+        if (mockSample.humidity > 60.0) {
+            applyStatusCard("high"); // Triggers your "High risk" mold style
+        } else {
+            applyStatusCard("safe"); // Triggers your "Safe" style
+        }
+
+    }, 1000); 
+}
+
+// Automatically start pumping as soon as the app loads
+document.addEventListener("DOMContentLoaded", startMockPump);
 })();

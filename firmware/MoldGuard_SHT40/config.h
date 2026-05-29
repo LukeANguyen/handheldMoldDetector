@@ -6,8 +6,8 @@
 // -----------------------------------------------------------------------------
 
 // Access Point (client connects here to read /data and optionally load dashboard)
-static const char *const WIFI_AP_SSID = "MoldGuard-AP";
-static const char *const WIFI_AP_PASS = "moldguard2026";  // min 8 chars for WPA2
+static const char *const WIFI_AP_SSID = "MoldScanner";
+static const char *const WIFI_AP_PASS = "betakappa";  // min 8 chars for WPA2
 
 // I2C — SHT40 default address 0x44 (leave pins per your ESP32 module)
 static const int PIN_I2C_SDA = 21;

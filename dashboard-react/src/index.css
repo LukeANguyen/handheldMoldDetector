@@ -1,0 +1,19 @@
+@import 'tailwindcss';
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --font-size: 16px;
+  --background: #ffffff;
+  --foreground: oklch(0.145 0 0);
+  --card: #ffffff;
+  --card-foreground: oklch(0.145 0 0);
+  --primary: #030213;
+  --muted: #ececf0;
+  --muted-foreground: #717182;
+  --input-background: #f3f3f5;
+  --border: rgba(0, 0, 0, 0.1);
+  --radius: 0.625rem;
+}
+
+/* ... include the rest of your theme parameters from theme.css here ... */
