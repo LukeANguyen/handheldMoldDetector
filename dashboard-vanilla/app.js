@@ -230,7 +230,7 @@
     });
   }
 
-  function renderAnalytics() {
+/*  function renderAnalytics() {
     const mount = el("analyticsMount");
     const pitch = window.MoldGuardPitch.buildPitchDeckExport(2026);
     const acc = pitch.betaAccuracy;
@@ -303,7 +303,7 @@
       </div>
     `;
   }
-
+*/
   function escapeHtml(s) {
     return String(s)
       .replace(/&/g, "&amp;")
@@ -354,7 +354,7 @@
     tick();
   });
   // --- MOCK DATA PUMP FOR TESTING ---
-function startMockPump() {
+/*function startMockPump() {
     console.log("Mock data pump started...");
     
     // Set an interval to run every 1000ms (1 second)
@@ -386,7 +386,7 @@ function startMockPump() {
 
     }, 1000); 
 }
-
+*/
 // Automatically start pumping as soon as the app loads
 document.addEventListener("DOMContentLoaded", startMockPump);
 })();
